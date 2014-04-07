@@ -1,22 +1,13 @@
 @media (max-width: 975px) {
-  .bCompare{
-  
+    .bCompare {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 
-    width: 90%;
-   margin-bottom: 20px;
-  
-      
-  }
-    
-    .compare1{
-        
-    
-    
+    .compare1 {
     }
-    
-    .compare2{
-    
-    float: left;
-    
-    }
+
+    .compare2 {
+        float: left;
+    };
 }

@@ -2,290 +2,304 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" ng-app="myApp">
+<!--<![endif]-->
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/pizza.css">
-        <link rel="stylesheet" href="css/datepicker.css">
-        
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pizza.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-       
-       <div id="container">
+    <!-- Add your site or application content here -->
+
+    <div id="container">
         <div class="header">
-         <div class="logo font3">Yahoo </div>
+            <a href="/index.html"><div class="logo font3">Yahoo</div></a>
             <div id="main_menu">
-            <ul class="menu">
-                <li class="menuItem bMenuButton">BILLING</li>    
-                <li class="menuItem bMenuButton">USAGE</li>
-                <li class="menuItem bMenuButton">PLAN</li>
-                <li class="menuItem bMenuButton">PHONE</li>
-                <li class="menuItem bMenuButton">SHOP</li>
-                <li class="menuItem bMenuButton bLogout">LOGOUT</li>
-            </ul>
+                <ul class="menu">
+                    <li class="menuItem bMenuButton">BILLING</li>
+                    <li class="menuItem bMenuButton">USAGE</li>
+                    <li class="menuItem bMenuButton">PLAN</li>
+                    <li class="menuItem bMenuButton">PHONE</li>
+                    <li class="menuItem bMenuButton">SHOP</li>
+                    <li class="menuItem bMenuButton bLogout">LOGOUT</li>
+                </ul>
             </div>
-        
-           </div>
-        
-           <br/>
-           <br/>
-           <span class="welcome font3">Welcome, Joshua ! </span>
-             <div class="dataBox activityBox">
+
+        </div>
+
+        <br/>
+        <br/>
+        <span class="welcome font3">Welcome, Joshua ! </span>
+        <div class="dataBox activityBox">
             <div class="heading font1">ACCOUNT ACTIVITY</div>
             <div class="notes content font2 activityContent" data-placement="top" data-content="<b class='aColor'>Annotation</b> : The idea behind having this on the top of the page is that in case there are any account alerts, they would be seen first and not missed by the user">Nothing to worry. No Alerts on your account.</div>
-            <div class="notes links bLink"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing detailed account activity."><a href="#">See recent activity on your account</a></div>
-           </div>
-           <div class="firstContainer">
-         
-       
-        
-           <div class="notes dataBox billAmountBox" data-placement="top" data-content="<b class='aColor'>Annotation</b> : A big box with a solid color button provides a clear call-to-action.">
-            <div class="heading font1 dueLabel">AMOUNT DUE</div>
-            <div class="content font2">
-               <div class="amount">$95.48</div>
-                <div id="billPayButton" class="payBill bButton font1">
-                <span class="bLabel">PAY BILL</span>
-                
-                </div>
-               </div>
-            <div class="links bLink dueLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link immediately gives the user the following indication: <ul> <li>That they have autoPay turned on</li> <li>The date of Auto Pay</li><li> If they need to change this setting they can simply click here</li></ul>"><a href="#">Your bill will be paid autmatically on April 8th.</a></div>
-           </div>
-        <div class="dueContainer">
-        <div class="dataBox dueBox notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This quickly provides information regarding, how many days are left to pay the bill, thus making the user think less and do more. Traditionally, only a date is provided and the user is expected to calculate how many days are left to pay</ul>">
-            <div class="heading font1">DUE IN 5 DAYS</div>
-            <div class="content font2">
-               
-                <div class="font2">
-               April 11th, 2014
-                
-                </div>
-               </div>
-            <div class="links bLink"></div>
-           </div>
-        
-         <div class="dataBox billPeriodBox">
-            <div class="heading font1">BILL PERIOD</div>
-            <div class="content font2">
-               
-                <div class="font2">
-               25th Feb to 25th March 2014
-                
-                </div>
-               </div>
-            <div class="links bLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : Clicking on this link will allow the user to select and see current unbilled usage as well as previously paid bills from previous billing periods">
-             <a href="#">Change billing period</a>
-             </div>
-           </div>
+            <div class="notes links bLink" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing detailed account activity."><a href="#">See recent activity on your account</a>
+            </div>
         </div>
-         <div class="dataBox billBreakUp">
-            <div class="heading font1 notes" data-placement = "top" data-content="<b class='aColor'>Annotation</b> : When people see their bill amount, they want to often see the breakup of how the amount totalled up. This view lets them get a quick overview of what the bill is made up of.">BILL BREAKDOWN</div>
-            <div class="content font2">
-                <div class="billViz"></div>
-                
-               </div>
-            <div class="links bLink billBreakUpLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page where they can see their detailed bill break down">
-             <a href="#">View bill break down</a>
-             </div>
-           </div>
-               </div>
-           <div class="toggleBillPay">
-        
-        <div class="billPayContainer">
-                   
-           
-            
-            <div class="amountSelect">
-            
-                <div class="label">How much do you want to pay ?</div>
-              
-                
-            <form action="">
-                <input type="radio" class="wholeAmount" name="paymentAmount" value="$98">
-                    $95.48 - Current Due
-                
-                   
-                <div class="customAmount">
-                    <input type="radio" name="paymentAmount" value="">
-                    Another amount
-                    <input type="text"></input>
-                    <span class="theCustomAmount" ></span>
-            </form>
-                </div>
-            
-            </div>
-             <div class="dateSelect">
-            <div class="label">Select a date for payment</div>
-            <input type="text">
-            </div>
-             
-             
-             <a href="/payment.html"><div class="payButton payBill bButton">PAY</div></a>
-            
-            </div>
-            
-           <div class="dataBox undUsage">
-            <div class="heading font1">UNDERSTANDING YOUR USAGE</div>
-                <div class="usageContainer">
-           <div id="my-cool-chart"></div>
-           <div class="font3 usageBrief notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This provides immediate usage details followed by a brief below. Hovering over the pie chart on the left, also provides details in the form of a percentage">
-           101 Unused minutes<br/>
-        599 Used minutes
-           
-           </div>
-               </div>
-            <div class="content font3 usageContent notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : After interviewing a few people, I realized that when they look at their call history, they really want to know three things : <ul><li>Whom do they call the most and how many minutes have they spent calling them</li><li>Whose calls do they receive the most and how many minutes are used up in receiving those calls</li><li>How many minutes of rollover are left, if any.</li></ul> Therefore, if this was shown in a simple plain and user friendly way in natural language, it would really make things easy for the user. They can come, pay their bill quickly and continue with their day, as they spend less time understanding their bill">
-               <p> You called <span class="bDark">“Sophie”, “Alex”</span> & <span class="bDark">“786-521-1866”</span> the most this month which used 357 of your 700 minutes. </p>
-                <p>The most calls that you received this month were from <span class="bDark">Sophie, Bill</span> & <span class="bDark">George</span> which used 159 of your 700 minutes.</p>
-                
-                <p>Adding this month's 101 unused minutes, you now have <span class="bDark">403 rollover</span> minutes left.</p>
-                
-               </div>
-          
-                  <div class="toggleWindow">
-        
-        <div class="callHistory notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user can get a quick look at the their call records if they need to do so. The table is using live data from an array. Every element is interactive. Type something in the search box to filter contents. You can also click on a table heading to sort according to that heading.You can also choose the number of elements you want to see on the page.">
-               
+        <div class="firstContainer">
 
-               </div>
-        
-        </div>
-                
-               <br><br><br>
-                <div class="links bLink notes"  data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page which will allow them to better understand they usage by showing additional content & visualizations">
-             <a href="#">Understand my minutes usage in greater detail</a>
-                <br/>
-           
-             </div>
-               <div class="heading font1 dataHeading notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This visualization provides a quick look at the data usage for the month. They can also see how much % of the total have they used.">DATA USAGE</div>
-               <div class="content font3">
-              
-                <div class="dataUsageViz">
-                
-                    <div class="dataUsed">
-                     <div class="dataLabel font2">1.8 GB
-                        <span class="percentDataValue">60%</span>
-                        </div>        
+
+
+            <div class="notes dataBox billAmountBox" data-placement="top" data-content="<b class='aColor'>Annotation</b> : A big box with a solid color button provides a clear call-to-action.">
+                <div class="heading font1 dueLabel">AMOUNT DUE</div>
+                <div class="content font2">
+                    <div class="amount">$95.48</div>
+                    <div id="billPayButton" class="payBill bButton font1">
+                        <span class="bLabel">PAY BILL</span>
+
                     </div>
-                    <div class="dataUnused"></div>
-                   
                 </div>
-                   <p>
-                   
-                   You used <span class="bDark">60%</span>, i.e 1.8 GB of your entire data limit of 3GB.
-                   </p>
-               </div>
-               
-               
-                <div class="links bLink notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : User can click this to see detailed data visualization">
-             <a href="#">View my usage in detail</a>
-                <br/>
-           
-             </div>
-           </div>
-           
-           <div class="dataBox billCompare">
-            <div class="heading font1">COMPARING YOUR BILL</div>
-            <div class="content font2 clearfix compareContent">
-                <p>
-                    
-                    
-                <div class="compare1 bCompare font3 notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This box provides a quick comparison chart showing how this bill compares to bills in previous few months. It also goes ahead and tells the user in a human-friendly way that their bill was high compared to previous months<p>Clicking on a particular bar will take the user to a page showing billing information of a month corresponding to the bar that they clicked on</p><p>This box and the one next to it is responsive. Resize the browser and take a look </p>">
-                <span>Compared to your usage in previous months, 
+                <div class="links bLink dueLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link immediately gives the user the following indication: <ul> <li>That they have autoPay turned on</li> <li>The date of Auto Pay</li><li> If they need to change this setting they can simply click here</li></ul>"><a href="#">Your bill will be paid autmatically on April 8th.</a>
+                </div>
+            </div>
+            <div class="dueContainer">
+                <div class="dataBox dueBox notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This quickly provides information regarding, how many days are left to pay the bill, thus making the user think less and do more. Traditionally, only a date is provided and the user is expected to calculate how many days are left to pay</ul>">
+                    <div class="heading font1">DUE IN 5 DAYS</div>
+                    <div class="content font2">
+
+                        <div class="font2">
+                            April 11th, 2014
+
+                        </div>
+                    </div>
+                    <div class="links bLink"></div>
+                </div>
+
+                <div class="dataBox billPeriodBox">
+                    <div class="heading font1">BILL PERIOD</div>
+                    <div class="content font2">
+
+                        <div class="font2">
+                            25th Feb to 25th March 2014
+
+                        </div>
+                    </div>
+                    <div class="links bLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : Clicking on this link will allow the user to select and see current unbilled usage as well as previously paid bills from previous billing periods">
+                        <a href="#">Change billing period</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dataBox billBreakUp">
+                <div class="heading font1 notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : When people see their bill amount, they want to often see the breakup of how the amount totalled up. This view lets them get a quick overview of what the bill is made up of.">BILL BREAKDOWN</div>
+                <div class="content font2">
+                    <div class="billViz"></div>
+
+                </div>
+                <div class="links bLink billBreakUpLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page where they can see their detailed bill break down">
+                    <a href="#">View bill break down</a>
+                </div>
+            </div>
+        </div>
+        <div class="toggleBillPay">
+
+            <div class="billPayContainer">
+
+
+
+                <div class="amountSelect font2">
+
+                    <div class="label font3">How much do you want to pay ?</div>
+
+
+                    <form action="">
+                        <p>
+                        <input type="radio" class="wholeAmount" name="paymentAmount" value="$98">$95.48 - Current Due
+</p>
+
+                        <div class="customAmount">
+                            <input type="radio" name="paymentAmount" class="anotherAmount" value="">Another amount
+                            <input type="text"></input>
+                            <span class="theCustomAmount"></span>
+                    </form>
+                    </div>
+
+                </div>
+                <div class="dateSelect">
+                    <div class="label font3">Select a date for payment</div>
+                    <input type="text">
+                </div>
+
+
+                <a href="/payment.html">
+                    <div class="payButton payBill bButton">PAY</div>
+                </a>
+
+            </div>
+
+            <div class="dataBox undUsage">
+                <div class="heading font1">UNDERSTANDING YOUR USAGE</div>
+                <div class="usageContainer">
+                    <div id="my-cool-chart"></div>
+                    <div class="font3 usageBrief notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This provides immediate usage details followed by a brief below. Hovering over the pie chart on the left, also provides details in the form of a percentage">
+                        101 Unused minutes
+                        <br/>599 Used minutes
+
+                    </div>
+                </div>
+                <div class="content font3 usageContent notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : After interviewing a few people, I realized that when they look at their call history, they really want to know three things : <ul><li>Whom do they call the most and how many minutes have they spent calling them</li><li>Whose calls do they receive the most and how many minutes are used up in receiving those calls</li><li>How many minutes of rollover are left, if any.</li></ul> Therefore, if this was shown in a simple plain and user friendly way in natural language, it would really make things easy for the user. They can come, pay their bill quickly and continue with their day, as they spend less time understanding their bill">
+                    <p>You called <span class="bDark">“Sophie”, “Alex”</span> & <span class="bDark">“786-521-1866”</span> the most this month which used 357 of your 700 minutes.</p>
+                    <p>The most calls that you received this month were from <span class="bDark">Sophie, Bill</span> & <span class="bDark">George</span> which used 159 of your 700 minutes.</p>
+
+                    <p>Adding this month's 101 unused minutes, you now have <span class="bDark">403 rollover</span> minutes left.</p>
+
+                </div>
+
+                <div class="toggleWindow">
+
+                    <div class="callHistory notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user can get a quick look at the their call records if they need to do so. The table is using live data from an array. Every element is interactive. Type something in the search box to filter contents. You can also click on a table heading to sort according to that heading.You can also choose the number of elements you want to see on the page.">
+
+
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <div class="links bLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page which will allow them to better understand they usage by showing additional content & visualizations">
+                    <a href="#">Understand my minutes usage in greater detail</a>
+                    <br/>
+
+                </div>
+                <div class="heading font1 dataHeading notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This visualization provides a quick look at the data usage for the month. They can also see how much % of the total have they used.">DATA USAGE</div>
+                <div class="content font3">
+
+                    <div class="dataUsageViz">
+
+                        <div class="dataUsed">
+                            <div class="dataLabel font2">1.8 GB
+                                <span class="percentDataValue">60%</span>
+                            </div>
+                        </div>
+                        <div class="dataUnused"></div>
+
+                    </div>
+                    <p>
+
+                        You used <span class="bDark">60%</span>, i.e 1.8 GB of your entire data limit of 3GB.
+                    </p>
+                </div>
+
+
+                <div class="links bLink notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : User can click this to see detailed data visualization">
+                    <a href="#">View my usage in detail</a>
+                    <br/>
+
+                </div>
+            </div>
+
+            <div class="dataBox billCompare">
+                <div class="heading font1">COMPARING YOUR BILL</div>
+                <div class="content font2 clearfix compareContent">
+                    <p>
+
+
+                        <div class="compare1 bCompare font3 notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This box provides a quick comparison chart showing how this bill compares to bills in previous few months. It also goes ahead and tells the user in a human-friendly way that their bill was high compared to previous months<p>Clicking on a particular bar will take the user to a page showing billing information of a month corresponding to the bar that they clicked on</p><p>This box and the one next to it is responsive. Resize the browser and take a look </p>">
+                            <span>Compared to your usage in previous months, 
 your usage this month was <span class="bDark">above normal</span></span>
- 
-                <div class="monthCompareViz"></div>
+
+                            <div class="monthCompareViz"></div>
+                        </div>
+
+                        <div class="compare2 bCompare font3 notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This can be a new experimental feature to see how users react to it. The feature will simply aggregate the bills of the people the user has called most frequently (using the same carrier) and it will then compare the aggergate value to the user's bill value and provide an approximation of whether the user pays more or less on an aveage compared to their friends">
+
+                            <span>You approximately <span class="bDark">spend less</span> on your bill compared to your friends on an average.</span>
+                            <div class="socialCompareViz"></div>
+                        </div>
+
+                    </p>
                 </div>
-                
-                 <div class="compare2 bCompare font3 notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This can be a new experimental feature to see how users react to it. The feature will simply aggregate the bills of the people the user has called most frequently (using the same carrier) and it will then compare the aggergate value to the user's bill value and provide an approximation of whether the user pays more or less on an aveage compared to their friends">
-                
-                  <span>You approximately <span class="bDark">spend less</span> on your bill 
-compared to your friends on an average.</span>
-                <div class="socialCompareViz"></div>
+                <div class="links bLink compareBillLink notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing month by month comparison in greater detail. They could compare minutes,data, or the whole amount across different months">
+                    <a href="#">See how my bill compares to previous months</a>
                 </div>
-               
-            </p>
-               </div>
-            <div class="links bLink compareBillLink notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing month by month comparison in greater detail. They could compare minutes,data, or the whole amount across different months">
-             <a href="#">See how my bill compares to previous months</a>
-             </div>
-           </div>
-        
-        <div class="billChange notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user really is analyzing their bill in so much detail only for one main reason : to see where they can save money. If the company understands this mental model of the user towards their bill, they can acheive great heights in user satisfaction and most importantly user retention. This will make the brand feel more personal and the user will get the impression that the company cares.<p>The way this feature will work is, it will analyze the user's usage history and simply sugest new plans, or suggest ways of saving. Simple ways of saving could be : 'We analyzed that you call Anna mostly in the evening. If you call her after 9 PM you can end up saving $300 per year.'</p>">
-            <span class="bHelp font2">I think my bill is too high</span>
-        <div class="helpBill bHelpButton font1">
-                <span class="bLabel">HELP ME SAVE MORE</span>
-                
+            </div>
+
+            <div class="billChange notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user really is analyzing their bill in so much detail only for one main reason : to see where they can save money. If the company understands this mental model of the user towards their bill, they can acheive great heights in user satisfaction and most importantly user retention. This will make the brand feel more personal and the user will get the impression that the company cares.<p>The way this feature will work is, it will analyze the user's usage history and simply sugest new plans, or suggest ways of saving. Simple ways of saving could be : 'We analyzed that you call Anna mostly in the evening. If you call her after 9 PM you can end up saving $300 per year.'</p>">
+                <span class="bHelp font2">I think my bill is too high</span>
+                <div class="helpBill bHelpButton font1">
+                    <span class="bLabel">HELP ME SAVE MORE</span>
+
                 </div>
-        
-        </div>
-      
 
-        
-
-            
-               </div>
-        
-        </div>
+            </div>
 
 
-           <ul data-pie-id="my-cool-chart">
-  <li data-value="599" class="chartList">Used Minutes</li>
-  <li data-value="101" class="chartList">Unused Minutes</li>
-  
-</ul>
+
+
 
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-       <script src="js/billChart.js"></script>
-        <script src="js/compareChart.js"></script>
-<script src="js/socialCompareViz.js"></script>
-        <script src="js/snapsvg.js"></script>
-        <script src="js/pizza.js"></script>
-   
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="js/callHistory.js"></script>
-
-<script src="js/bootstrap-popover.js"></script>
-       
-        <script>
-            $('.notes').popover({'animation':'true','trigger':'hover','html':'true'});
-            Pizza.init();
-            $('.dateSelect input').datepicker();
-            $(document).ready(function(){
-
-    $('#billPayButton').click(function(){
-    
-    $('.billPayContainer').css('display','block');
-        
-    });
+    </div>
 
 
+    <ul data-pie-id="my-cool-chart">
+        <li data-value="599" class="chartList">Used Minutes</li>
+        <li data-value="101" class="chartList">Unused Minutes</li>
 
-});
-            
-        </script>
-    </body>
+    </ul>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/billChart.js"></script>
+    <script src="js/compareChart.js"></script>
+    <script src="js/socialCompareViz.js"></script>
+    <script src="js/snapsvg.js"></script>
+    <script src="js/pizza.js"></script>
+
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/callHistory.js"></script>
+
+    <script src="js/bootstrap-popover.js"></script>
+
+    <script>
+        $('.notes').popover({
+            'animation': 'true',
+            'trigger': 'hover',
+            'html': 'true'
+        });
+        Pizza.init();
+        $('.dateSelect input').datepicker();
+        $(document).ready(function () {
+
+            $('#billPayButton').click(function () {
+
+                $('.billPayContainer').css('display', 'block');
+
+            });
+
+
+
+        });
+    </script>
+</body>
+
 </html>

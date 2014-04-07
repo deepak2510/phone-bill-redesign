@@ -1064,11 +1064,11 @@ cursor: pointer;
 
 #call_history_next{
     display: inline-block;
-    width: 100px;
+    width: 60px;
     height: 40px;
     background-color: black;
     color: white;
-   
+   font-size: 12px;
     
     letter-spacing: 0.5em;
     background-color : #11767f;
@@ -1082,9 +1082,9 @@ padding: 0px 30px;
 }
 #call_history_previous{
      display: inline-block;
-    width: 120px;
+    width: 100px;
     height: 40px;
-   
+   font-size: 12px;
     color: white;
     
     margin: 10px;
@@ -1171,13 +1171,15 @@ input[type="search"]::-webkit-search-decoration {
 .dateSelect {
     display: inline-block;
     margin-left: 50px;
-    margin-top: 20px;
+    
     text-align: left;
+   
 }
 
 .payButton {
     position: relative;
-   
+   display:inline-block;
+    
     width: 100px;
     margin-left:20px !important;
 }
@@ -1330,4 +1332,22 @@ input[type="search"]::-webkit-search-decoration {
   border-right-width: 0;
   border-left-color: #ffffff;
   bottom: -10px;
+}
+.wholeAmount {
+    margin-right: 20px;
+   
+}
+
+.anotherAmount {
+    margin-right: 20px;
+}
+
+
+
+.dateLabel {
+    margin-bottom: 20px;
+}
+
+.dateSelect .label {
+    margin-bottom: 20px;
 }
