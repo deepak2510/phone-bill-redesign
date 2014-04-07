@@ -21,20 +21,21 @@
 ];
 
     console.log(data);
-var total = 0;
+
     var max = 0;
 data.forEach(function(elem,i){
 
-    total += Math.abs(elem.value);
+   
     max = Math.max(elem.value,max);
 
 });
 
 data.forEach(function(elem,i){
     
-   console.log(elem.value/total);
-    var height = (elem.value/max)*250;
-    var template = '<div class="barCompareContainer"><div class="bCompareBar" style="width:'+height+'px"><span class="elemCompareValue">$ '+elem.value+'</span><span data-label = "'+elem.label+'"class="labelComparePopUp font2">'+elem.label+'</span></div></div>';
+   
+    
+    var width = ((elem.value/max)*($('.monthCompareViz').parent().width()-80))/$('.monthCompareViz').parent().width()*100;
+    var template = '<div class="barCompareContainer"><div class="bCompareBar" style="width:'+width+'%"><span class="elemCompareValue">$ '+elem.value+'</span><span data-label = "'+elem.label+'"class="labelComparePopUp font2">'+elem.label+'</span></div></div>';
     
     
     if(elem.value)

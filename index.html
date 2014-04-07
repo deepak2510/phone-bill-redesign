@@ -14,6 +14,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/pizza.css">
         
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -122,12 +123,23 @@
                 <p>Adding this month's 101 unused minutes, you now have <span class="bDark">403 rollover</span> minutes left.</p>
                 
                </div>
-            <div class="links bLink">
-             <a href="#">Understand my usage in detail</a>
-                <br/>
-            <a href="#">View full call history</a>
-             </div>
+          
+                  <div class="toggleWindow">
+        
+        <div class="callHistory">
+               
+
+               </div>
+        
+        </div>
+                
                <br><br><br>
+                <div class="links bLink">
+             <a href="#">Understand my minutes usage in greater detail</a>
+                <br/>
+           
+             </div>
+               <div class="heading font1 dataHeading">DATA USAGE</div>
                <div class="content font3">
               
                 <div class="dataUsageViz">
@@ -190,14 +202,7 @@ compared to your friends on an average.</span>
         
         </div>
 
-           
-           
-           
-           
-           
-           
-           
-           
+
            <ul data-pie-id="my-cool-chart">
   <li data-value="599" class="chartList">Used Minutes</li>
   <li data-value="101" class="chartList">Unused Minutes</li>
@@ -217,7 +222,8 @@ compared to your friends on an average.</span>
 <script src="js/socialCompareViz.js"></script>
         <script src="js/snapsvg.js"></script>
         <script src="js/pizza.js"></script>
-        
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/callHistory.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             Pizza.init();
