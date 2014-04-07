@@ -1,0 +1,801 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+        font-family: 'Helvetica'
+            
+    }
+    
+   
+    
+    
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    
+}
+
+.menu {
+    list-style-type: none;
+    right:10px;
+    position: relative;
+   top:8px;
+    float: right;
+        
+    
+}
+
+.menuItem {
+    display: inline-block;
+        font-size:12px;
+}
+
+.heading {
+    letter-spacing: 0.5em;
+    font-size: 14px;
+}
+
+.font1{
+font-family: 'Helvetica';
+    
+}
+
+.font2{
+font-family: 'Georgia';
+}
+
+.bLink{
+font-family: 'Georgia';
+    font-style: italic;
+    font-size: 14px;
+    
+}
+
+.bLink a{
+color:#5b85d1;
+    text-decoration: underline;
+}
+.dataBox {
+    padding: 20px 3%;
+    margin: 0px 3%;
+    
+    
+}
+
+.amount {
+    font-size: 48px;
+    color: #000;
+    letter-spacing: 0.1em;
+}
+
+.bButton {
+    
+    color: white;
+    letter-spacing: 0.5em;
+    background-color : #11767f;
+    text-align: center;
+      line-height: 60px;
+padding: 0px 30px;
+    margin-top:5px;
+}
+
+.payBill {
+    display: inline-block;
+    height: 60px;
+    margin: 0 auto;
+    cursor : pointer;
+}
+
+.payBill:hover{
+
+  background-color: #000;
+    color: white;
+}
+
+.bLabel {
+    line-height: 20px;
+
+}
+
+
+.links {
+    
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}
+.billViz {
+  display:inline-block;
+
+ 
+    position: relative;
+    top: 20px;
+    
+}
+.bBar {
+    position: relative;
+width: 30px;
+    background-color: #11767f;
+    display: inline-block;
+    margin-right:10px;
+    overflow: visible;
+    text-align: left;
+
+}
+
+.bCompareBar{
+position: relative;
+height: 30px;
+    background-color: #11767f;
+    margin-top:15px;
+    margin-bottom: 20px;
+    overflow: visible;
+    cursor: pointer;
+}
+.elemValue{
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+}
+.elemCompareValue{
+    position: absolute;
+  color: white;
+    font-size: 12px;
+    margin-top: 7px;
+    right: 10px;
+}
+
+.labelPopUp{
+display: none;
+    position: absolute;
+  font-size: 14px;
+    padding: 5px 15px;
+    background-color: #eee;
+    z-index: 5000;
+
+}
+.labelComparePopUp{
+display: block;
+    position: absolute;
+  font-size: 14px;
+    padding: 5px 15px;
+    background-color: #fff;
+    z-index: 5000;
+    left: 100%;
+    margin-left: 10px;
+  
+    text-align: left;
+    
+
+}
+.bBar:hover{
+
+background-color:black;
+}
+
+.bCompareBar:hover{
+background-color: black;
+    
+}
+.barContainer{
+
+display: inline-block;
+}
+.barCompareContainer{
+display: block;
+    position: relative;
+}
+.billAmountBox {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-color : #ddd;
+    border-style : solid;
+    border-width: 1px;
+    
+}
+.bilAmountBox:hover {
+    
+    border-color : #999;
+   
+    
+    
+    
+}
+
+.dueBox {
+
+}
+
+.dueContainer {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    
+}
+
+.billBreakUp {
+ display: inline-block;
+vertical-align: top;
+    text-align: left;
+}
+
+.billBreakUpLink {
+  position: relative;
+    
+    bottom: -50px;
+    
+}
+
+.welcome {
+    display: block;
+    position: relative;
+    width: 700px;
+    
+    font-family: "Helvetica Neue";
+    font-size: 28px;
+    padding: 50px;
+    padding-bottom: 0px;
+    font-weight: 100;
+    margin: 0 auto;
+   text-align: center;
+    margin-bottom: 30px;
+    
+    
+}
+
+.undUsage {
+    
+  max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+   
+    margin-top: 50px;
+}
+
+.font3 {
+    font-size: 26px;
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+}
+
+.bDark {
+    font-weight: 400;
+}
+
+
+
+#my-cool-chart{
+width : 200px;
+height: 200px;
+display: inline-block;
+    
+}
+
+.chartList {
+    display: none;
+}
+
+.usageBrief {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-top: 70px;
+}
+
+.usageContainer {
+    text-align: center;
+}
+
+.firstContainer {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eee;
+    padding-top: 50px;
+}
+
+.dataUsageViz {
+    
+    width: 100%;
+    height: 20px;
+    position: relative;
+    border-color: red;
+    border-style : solid;
+    border-width: 1px;
+    
+    
+}
+
+.dataUsed {
+    background-color:red;
+    width: 60%;
+    height: 20px;
+    position: relative;
+    
+}
+
+.dataLabel {
+    font-size: 12px;
+    background-color: #11767f;
+    position: absolute;
+    right:-20px;
+    padding : 0px 5px;
+    width: 40px;
+    margin-top: 2px;
+    text-align: center;
+    height: 15px; 
+    color: white;
+}
+
+.percentDataValue {
+    
+display: block;
+    position: relative;
+    margin-right: -20px;
+    margin-top: 5px;
+    font-size: 16px;
+    color : black;
+    
+}
+
+.billCompare {
+     
+  max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.compare1 {
+    float: left;
+
+
+}
+
+.compare {
+    
+    
+}
+
+.bCompare {
+    
+    position: relative;
+    width: 350px;
+    background-color: #eee;
+    height: 300px;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+    font-size: 24px;
+}
+
+.compare2 {
+    
+    float: right;
+    position: relative;
+    vertical-align: top;
+    right: 0px;
+}
+
+.content {
+   
+}
+
+.dueLabel {
+    color: #000;
+}
+
+.dueLink{
+    margin-top: 10px;
+}
+
+.dueLink a{
+    
+}
+
+.activityContent {
+    text-align: left;
+}
+
+.usageContent p{
+   text-align: left;
+}
+
+.compareBillLink {
+    position: relative;
+    margin-top: 10px;
+}
+
+.billChange {
+
+    text-align: center;
+    padding: 20px; 
+}
+
+.bHelp {
+    display: block;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.helpBill {
+     display: inline-block;
+    height: 60px;
+    margin: 0 auto;
+    cursor : pointer;
+}
+
+.helpBill:hover {
+    background-color:#000;
+}
+
+.bHelpButton {
+     background-color: #11767f;
+    color: white;
+    letter-spacing: 0.5em;
+    
+    text-align: center;
+      line-height: 60px;
+padding: 0px 30px;
+    margin-top:5px;
+}
+
+.billPeriodBox {
+    position: relative;
+   
+}
+
+.bMenuButton {
+    color: #11767f;
+    letter-spacing: 0.3em;
+    text-align: center;
+    line-height: 40px;
+    padding: 0px 30px;
+    margin-top:5px;
+    border-color : #11767f;
+    border-width: 1px;
+    border-style: solid;
+    height: 40px;
+    cursor : pointer;
+    margin-left: 10px;
+}
+
+.bMenuButton:hover{
+  background-color : #11767f;
+    color: white;
+}
+
+.bLogout {
+    background-color:#11767f;
+    color: white;
+}
+.bLogout:hover{
+background-color: black;
+}
+
+
+
+.activityBox {
+    width: 850px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    font-size: 46px;
+    margin-left:50px;
+    margin-top:20px;
+    float: left;
+    
+    
+}
