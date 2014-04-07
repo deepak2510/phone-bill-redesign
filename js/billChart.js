@@ -43,7 +43,7 @@ data.forEach(function(elem,i){
     var template = '<div class="barContainer notes" data-placement="top" data-content="'+elem.label+'"><div class="bBar" style="height:'+height+'px"><span class="elemValue">$'+elem.value+'</span></div></div>';
     
     if(elem.value<0) {
-      var template = '<div class="barContainer"><span data-label = "'+elem.label+'"class="labelPopUp font2">'+elem.label+'</span><div class="bBar" style="height:'+Math.abs(height)+'px; bottom:'+height+'px"><span class="elemValue">$'+elem.value+'</span></div></div>';
+      var template = '<div class="barContainer notes" data-placement="top" data-content="'+elem.label+'"><div class="bBar" style="height:'+Math.abs(height)+'px; bottom:'+height+'px"><span class="elemValue">$'+elem.value+'</span></div></div>';
         
     }
     if(elem.value)
