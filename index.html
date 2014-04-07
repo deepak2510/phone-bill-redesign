@@ -1,1 +1,231 @@
-My Github Page
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/pizza.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       
+       <div id="container">
+        <div class="header">
+         <div class="logo font3">Yahoo </div>
+            <div id="main_menu">
+            <ul class="menu">
+                <li class="menuItem bMenuButton">BILLING</li>    
+                <li class="menuItem bMenuButton">USAGE</li>
+                <li class="menuItem bMenuButton">PLAN</li>
+                <li class="menuItem bMenuButton">PHONE</li>
+                <li class="menuItem bMenuButton">SHOP</li>
+                <li class="menuItem bMenuButton bLogout">LOGOUT</li>
+            </ul>
+            </div>
+        
+           </div>
+        
+           
+           
+           <p class="welcome">Welcome, Joshua ! </p>
+             <div class="dataBox activityBox">
+            <div class="heading font1">ACCOUNT ACTIVITY</div>
+            <div class="content font2 activityContent">Nothing to worry. No Alerts on your account.</div>
+            <div class="links bLink"><a href="#">See recent activity on your account</a></div>
+           </div>
+           <div class="firstContainer">
+         
+       
+        
+           <div class="dataBox billAmountBox">
+            <div class="heading font1 dueLabel">AMOUNT DUE</div>
+            <div class="content font2">
+               <div class="amount">$95.48</div>
+                <div class="payBill bButton font1">
+                <span class="bLabel">PAY BILL</span>
+                
+                </div>
+               </div>
+            <div class="links bLink dueLink"><a href="#">Your bill will be paid autmatically on April 8th.</a></div>
+           </div>
+        <div class="dueContainer">
+        <div class="dataBox dueBox">
+            <div class="heading font1">DUE IN 5 DAYS</div>
+            <div class="content font2">
+               
+                <div class="font2">
+               April 11th, 2014
+                
+                </div>
+               </div>
+            <div class="links bLink"></div>
+           </div>
+        
+         <div class="dataBox billPeriodBox">
+            <div class="heading font1">BILL PERIOD</div>
+            <div class="content font2">
+               
+                <div class="font2">
+               25th Feb to 25th March 2014
+                
+                </div>
+               </div>
+            <div class="links bLink">
+             <a href="#">Change billing period</a>
+             </div>
+           </div>
+        </div>
+         <div class="dataBox billBreakUp">
+            <div class="heading font1">BILL BREAKDOWN</div>
+            <div class="content font2">
+                <div class="billViz"></div>
+                
+               </div>
+            <div class="links bLink billBreakUpLink">
+             <a href="#">View bill break down</a>
+             </div>
+           </div>
+               </div>
+          
+           <div class="dataBox undUsage">
+            <div class="heading font1">UNDERSTANDING YOUR USAGE</div>
+                <div class="usageContainer">
+           <div id="my-cool-chart"></div>
+           <div class="font3 usageBrief">
+           101 Unused minutes<br/>
+        599 Used minutes
+           
+           </div>
+               </div>
+            <div class="content font3 usageContent">
+               <p> You called <span class="bDark">“Sophie”, “Alex”</span> & <span class="bDark">“786-521-1866”</span> the most this month which used 357 of your 700 minutes. </p>
+                <p>The most calls that you received this month were from <span class="bDark">Sophie, Bill</span> & <span class="bDark">George</span> which used 159 of your 700 minutes.</p>
+                
+                <p>Adding this month's 101 unused minutes, you now have <span class="bDark">403 rollover</span> minutes left.</p>
+                
+               </div>
+            <div class="links bLink">
+             <a href="#">Understand my usage in detail</a>
+                <br/>
+            <a href="#">View full call history</a>
+             </div>
+               <br><br><br>
+               <div class="content font3">
+              
+                <div class="dataUsageViz">
+                
+                    <div class="dataUsed">
+                     <div class="dataLabel font2">1.8 GB
+                        <span class="percentDataValue">60%</span>
+                        </div>        
+                    </div>
+                    <div class="dataUnused"></div>
+                   
+                </div>
+                   <p>
+                   
+                   You used <span class="bDark">60%</span>, i.e 1.8 GB of your entire data limit of 3GB.
+                   </p>
+               </div>
+               
+               
+                <div class="links bLink">
+             <a href="#">View my usage in detail</a>
+                <br/>
+           
+             </div>
+           </div>
+           
+           <div class="dataBox billCompare">
+            <div class="heading font1">COMPARING YOUR BILL</div>
+            <div class="content font2 clearfix compareContent">
+                <p>
+                    
+                    
+                <div class="compare1 bCompare font3">
+                <span>Compared to your usage in previous months, 
+your usage this month was <span class="bDark">above normal</span></span>
+ 
+                <div class="monthCompareViz"></div>
+                </div>
+                
+                 <div class="compare2 bCompare font3">
+                
+                  <span>You approximately <span class="bDark">spend less</span> on your bill 
+compared to your friends on an average.</span>
+                <div class="socialCompareViz"></div>
+                </div>
+               
+            </p>
+               </div>
+            <div class="links bLink compareBillLink">
+             <a href="#">See how my bill compares to previous months</a>
+             </div>
+           </div>
+        
+        <div class="billChange">
+            <span class="bHelp font2">I think my bill is too high</span>
+        <div class="helpBill bHelpButton font1">
+                <span class="bLabel">HELP ME SAVE MORE</span>
+                
+                </div>
+        
+        </div>
+
+           
+           
+           
+           
+           
+           
+           
+           
+           <ul data-pie-id="my-cool-chart">
+  <li data-value="599" class="chartList">Used Minutes</li>
+  <li data-value="101" class="chartList">Unused Minutes</li>
+  
+</ul>
+
+           
+           
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+       <script src="js/billChart.js"></script>
+        <script src="js/compareChart.js"></script>
+<script src="js/socialCompareViz.js"></script>
+        <script src="js/snapsvg.js"></script>
+        <script src="js/pizza.js"></script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            Pizza.init();
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
