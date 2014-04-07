@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/pizza.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+        
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+        
+    </head>
+    <body ngApp="myApp">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       
+       <div id="container" ng-controller="myCtrl">
+           
+        <div class="header">
+         <div class="logo font3">Yahoo </div>
+            <div id="main_menu">
+            <ul class="menu">
+                <li class="menuItem bMenuButton">BILLING</li>    
+                <li class="menuItem bMenuButton">USAGE</li>
+                <li class="menuItem bMenuButton">PLAN</li>
+                <li class="menuItem bMenuButton">PHONE</li>
+                <li class="menuItem bMenuButton">SHOP</li>
+                <li class="menuItem bMenuButton bLogout">LOGOUT</li>
+            </ul>
+            </div>
+        
+           </div>
+           
+           <div class="paymentInfo">
+           
+              <p> Payment Amount</p>
+               <span class="amount font2">
+                 $95.48
+               </span>
+             
+           
+           </div>
+           <div class="thanks" ng-if="paymentDone">Thank you for your payment.
+           <br>
+               <a href="/index.html">Click here to return</a>
+           </div>
+           <div class="paymentOption" ng-if="!paymentDone">
+           <p>Pay using :</p>
+               
+               <form action="">
+                   
+                   <p ng-class="{'hidden' : removePaymentMethod}">
+               <input type="radio" ng-model="paymentMethod" name="pMethod" value="existing" class="rInput"> 
+                       <span class="plabel">Stored Visa ****8812 
+                           <a href="#" ng-click="removePaymentMethod=!removePaymentMethod">Remove</a></span>
+                       
+                       </p>
+                   <p>
+                   <input type="radio" ng-model="paymentMethod" name="pMethod" value="newCard">
+                       <span class="plabel">New Card</span>
+                   </p>
+                   
+                   <p>
+                   <input type="radio" ng-model="paymentMethod" name="pMethod" value="bank"> <span class="plabel">New Checking Account</span>
+                   </p>
+               
+               
+               
+               </form>
+               <br><br>
+               <div ng-if ="paymentMethod == 'existing'">
+                <b>Pay with</b>
+
+        <b>Name</b>: Joshua Gates<br>
+        <b>Account</b>:  Visa ****6120<br>
+        <b>Zip</b>: 12345<br>
+        <b>Transaction type</b>: Airtime payment<br>
+        <b>T-Mobile account number</b>: 12346789<br>
+               <button type="submit" class="pure-button pure-button-primary finalPayButton" ng-click="done()">Pay</button>
+               </div>
+               
+               <div ng-if ="paymentMethod == 'newCard'">
+                   
+             <form class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Name on Card</label>
+            <input id="name" type="text" placeholder="Your name">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="cardnumber">Card Number</label>
+            <input id="cardnumber" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="cvv">CVV Number</label>
+            <input id="cvv" type="text" placeholder="XXX">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="expDate">Valid Until</label>
+            <input id="expDate" type="text" placeholder="MM/DD">
+        </div>
+
+        <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I've read the terms and conditions
+            </label>
+
+            <button type="submit" class="pure-button pure-button-primary finalPayButton" ng-click="done()">Pay</button>
+        </div>
+    </fieldset>
+</form>
+               
+               </div>
+               
+               <div ng-if ="paymentMethod == 'bank'">
+               Bank
+               
+               </div>
+           
+           
+           </div>
+           <br/>
+           <br/>
+          
+            </div>
+            
+             
+       
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+       <script src="js/billChart.js"></script>
+        <script src="js/compareChart.js"></script>
+<script src="js/socialCompareViz.js"></script>
+        <script src="js/snapsvg.js"></script>
+        <script src="js/pizza.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="js/callHistory.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+          <script type="text/javascript" src="js/scripts.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+           
+      
+        <script>
+            Pizza.init();
+            $('.dateSelect input').datepicker();
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

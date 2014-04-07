@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/pizza.css">
+        <link rel="stylesheet" href="css/datepicker.css">
         
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -49,26 +50,26 @@
            <span class="welcome font3">Welcome, Joshua ! </span>
              <div class="dataBox activityBox">
             <div class="heading font1">ACCOUNT ACTIVITY</div>
-            <div class="content font2 activityContent">Nothing to worry. No Alerts on your account.</div>
-            <div class="links bLink"><a href="#">See recent activity on your account</a></div>
+            <div class="notes content font2 activityContent" data-placement="top" data-content="<b class='aColor'>Annotation</b> : The idea behind having this on the top of the page is that in case there are any account alerts, they would be seen first and not missed by the user">Nothing to worry. No Alerts on your account.</div>
+            <div class="notes links bLink"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing detailed account activity."><a href="#">See recent activity on your account</a></div>
            </div>
            <div class="firstContainer">
          
        
         
-           <div class="dataBox billAmountBox">
+           <div class="notes dataBox billAmountBox" data-placement="top" data-content="<b class='aColor'>Annotation</b> : A big box with a solid color button provides a clear call-to-action.">
             <div class="heading font1 dueLabel">AMOUNT DUE</div>
             <div class="content font2">
                <div class="amount">$95.48</div>
-                <div class="payBill bButton font1">
+                <div id="billPayButton" class="payBill bButton font1">
                 <span class="bLabel">PAY BILL</span>
                 
                 </div>
                </div>
-            <div class="links bLink dueLink"><a href="#">Your bill will be paid autmatically on April 8th.</a></div>
+            <div class="links bLink dueLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link immediately gives the user the following indication: <ul> <li>That they have autoPay turned on</li> <li>The date of Auto Pay</li><li> If they need to change this setting they can simply click here</li></ul>"><a href="#">Your bill will be paid autmatically on April 8th.</a></div>
            </div>
         <div class="dueContainer">
-        <div class="dataBox dueBox">
+        <div class="dataBox dueBox notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This quickly provides information regarding, how many days are left to pay the bill, thus making the user think less and do more. Traditionally, only a date is provided and the user is expected to calculate how many days are left to pay</ul>">
             <div class="heading font1">DUE IN 5 DAYS</div>
             <div class="content font2">
                
@@ -89,23 +90,57 @@
                 
                 </div>
                </div>
-            <div class="links bLink">
+            <div class="links bLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : Clicking on this link will allow the user to select and see current unbilled usage as well as previously paid bills from previous billing periods">
              <a href="#">Change billing period</a>
              </div>
            </div>
         </div>
          <div class="dataBox billBreakUp">
-            <div class="heading font1">BILL BREAKDOWN</div>
+            <div class="heading font1 notes" data-placement = "top" data-content="<b class='aColor'>Annotation</b> : When people see their bill amount, they want to often see the breakup of how the amount totalled up. This view lets them get a quick overview of what the bill is made up of.">BILL BREAKDOWN</div>
             <div class="content font2">
                 <div class="billViz"></div>
                 
                </div>
-            <div class="links bLink billBreakUpLink">
+            <div class="links bLink billBreakUpLink notes" data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page where they can see their detailed bill break down">
              <a href="#">View bill break down</a>
              </div>
            </div>
                </div>
-          
+           <div class="toggleBillPay">
+        
+        <div class="billPayContainer">
+                   
+           
+            
+            <div class="amountSelect">
+            
+                <div class="label">How much do you want to pay ?</div>
+              
+                
+            <form action="">
+                <input type="radio" class="wholeAmount" name="paymentAmount" value="$98">
+                    $95.48 - Current Due
+                
+                   
+                <div class="customAmount">
+                    <input type="radio" name="paymentAmount" value="">
+                    Another amount
+                    <input type="text"></input>
+                    <span class="theCustomAmount" ></span>
+            </form>
+                </div>
+            
+            </div>
+             <div class="dateSelect">
+            <div class="label">Select a date for payment</div>
+            <input type="text">
+            </div>
+             
+             
+             <a href="/payment.html"><div class="payButton payBill bButton">PAY</div></a>
+            
+            </div>
+            
            <div class="dataBox undUsage">
             <div class="heading font1">UNDERSTANDING YOUR USAGE</div>
                 <div class="usageContainer">
@@ -201,6 +236,14 @@ compared to your friends on an average.</span>
                 </div>
         
         </div>
+      
+
+        
+
+            
+               </div>
+        
+        </div>
 
 
            <ul data-pie-id="my-cool-chart">
@@ -209,8 +252,6 @@ compared to your friends on an average.</span>
   
 </ul>
 
-           
-           
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -222,17 +263,29 @@ compared to your friends on an average.</span>
 <script src="js/socialCompareViz.js"></script>
         <script src="js/snapsvg.js"></script>
         <script src="js/pizza.js"></script>
+   
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
         <script type="text/javascript" src="js/callHistory.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+<script src="js/bootstrap-popover.js"></script>
+       
         <script>
+            $('.notes').popover({'animation':'true','trigger':'hover','html':'true'});
             Pizza.init();
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            $('.dateSelect input').datepicker();
+            $(document).ready(function(){
+
+    $('#billPayButton').click(function(){
+    
+    $('.billPayContainer').css('display','block');
+        
+    });
+
+
+
+});
+            
         </script>
     </body>
 </html>
