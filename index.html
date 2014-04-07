@@ -145,13 +145,13 @@
             <div class="heading font1">UNDERSTANDING YOUR USAGE</div>
                 <div class="usageContainer">
            <div id="my-cool-chart"></div>
-           <div class="font3 usageBrief">
+           <div class="font3 usageBrief notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : This provides immediate usage details followed by a brief below. Hovering over the pie chart on the left, also provides details in the form of a percentage">
            101 Unused minutes<br/>
         599 Used minutes
            
            </div>
                </div>
-            <div class="content font3 usageContent">
+            <div class="content font3 usageContent notes" data-placement="top" data-content="<b class='aColor'>Annotation</b> : After interviewing a few people, I realized that when they look at their call history, they really want to know three things : <ul><li>Whom do they call the most and how many minutes have they spent calling them</li><li>Whose calls do they receive the most and how many minutes are used up in receiving those calls</li><li>How many minutes of rollover are left, if any.</li></ul> Therefore, if this was shown in a simple plain and user friendly way in natural language, it would really make things easy for the user. They can come, pay their bill quickly and continue with their day, as they spend less time understanding their bill">
                <p> You called <span class="bDark">“Sophie”, “Alex”</span> & <span class="bDark">“786-521-1866”</span> the most this month which used 357 of your 700 minutes. </p>
                 <p>The most calls that you received this month were from <span class="bDark">Sophie, Bill</span> & <span class="bDark">George</span> which used 159 of your 700 minutes.</p>
                 
@@ -161,7 +161,7 @@
           
                   <div class="toggleWindow">
         
-        <div class="callHistory">
+        <div class="callHistory notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user can get a quick look at the their call records if they need to do so. The table is using live data from an array. Every element is interactive. Type something in the search box to filter contents. You can also click on a table heading to sort according to that heading.You can also choose the number of elements you want to see on the page.">
                
 
                </div>
@@ -169,12 +169,12 @@
         </div>
                 
                <br><br><br>
-                <div class="links bLink">
+                <div class="links bLink notes"  data-placement="bottom" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page which will allow them to better understand they usage by showing additional content & visualizations">
              <a href="#">Understand my minutes usage in greater detail</a>
                 <br/>
            
              </div>
-               <div class="heading font1 dataHeading">DATA USAGE</div>
+               <div class="heading font1 dataHeading notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This visualization provides a quick look at the data usage for the month. They can also see how much % of the total have they used.">DATA USAGE</div>
                <div class="content font3">
               
                 <div class="dataUsageViz">
@@ -194,7 +194,7 @@
                </div>
                
                
-                <div class="links bLink">
+                <div class="links bLink notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : User can click this to see detailed data visualization">
              <a href="#">View my usage in detail</a>
                 <br/>
            
@@ -207,14 +207,14 @@
                 <p>
                     
                     
-                <div class="compare1 bCompare font3">
+                <div class="compare1 bCompare font3 notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This box provides a quick comparison chart showing how this bill compares to bills in previous few months. It also goes ahead and tells the user in a human-friendly way that their bill was high compared to previous months<p>Clicking on a particular bar will take the user to a page showing billing information of a month corresponding to the bar that they clicked on</p><p>This box and the one next to it is responsive. Resize the browser and take a look </p>">
                 <span>Compared to your usage in previous months, 
 your usage this month was <span class="bDark">above normal</span></span>
  
                 <div class="monthCompareViz"></div>
                 </div>
                 
-                 <div class="compare2 bCompare font3">
+                 <div class="compare2 bCompare font3 notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This can be a new experimental feature to see how users react to it. The feature will simply aggregate the bills of the people the user has called most frequently (using the same carrier) and it will then compare the aggergate value to the user's bill value and provide an approximation of whether the user pays more or less on an aveage compared to their friends">
                 
                   <span>You approximately <span class="bDark">spend less</span> on your bill 
 compared to your friends on an average.</span>
@@ -223,12 +223,12 @@ compared to your friends on an average.</span>
                
             </p>
                </div>
-            <div class="links bLink compareBillLink">
+            <div class="links bLink compareBillLink notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : This link will take the user to a page showing month by month comparison in greater detail. They could compare minutes,data, or the whole amount across different months">
              <a href="#">See how my bill compares to previous months</a>
              </div>
            </div>
         
-        <div class="billChange">
+        <div class="billChange notes"  data-placement="top" data-content="<b class='aColor'>Annotation</b> : The user really is analyzing their bill in so much detail only for one main reason : to see where they can save money. If the company understands this mental model of the user towards their bill, they can acheive great heights in user satisfaction and most importantly user retention. This will make the brand feel more personal and the user will get the impression that the company cares.<p>The way this feature will work is, it will analyze the user's usage history and simply sugest new plans, or suggest ways of saving. Simple ways of saving could be : 'We analyzed that you call Anna mostly in the evening. If you call her after 9 PM you can end up saving $300 per year.'</p>">
             <span class="bHelp font2">I think my bill is too high</span>
         <div class="helpBill bHelpButton font1">
                 <span class="bLabel">HELP ME SAVE MORE</span>
