@@ -538,15 +538,13 @@ vertical-align: top;
 .welcome {
     display: block;
     position: relative;
-    width: 700px;
-    
-    font-family: "Helvetica Neue";
+
     font-size: 28px;
     padding: 50px;
     padding-bottom: 0px;
-    font-weight: 100;
-    margin: 0 auto;
-   text-align: center;
+   
+    text-align: center;
+
     margin-bottom: 30px;
     
     
@@ -563,7 +561,7 @@ vertical-align: top;
 
 .font3 {
     font-size: 26px;
-    font-family: 'Helvetica Neue';
+ font-family: 'Lato', sans-serif;
     font-weight: 100;
 }
 
